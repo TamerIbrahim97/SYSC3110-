@@ -2,6 +2,9 @@ import java.util.ArrayList;
 
 public class AddressBook {
 	private ArrayList<BuddyInfo> buddyInfo;
+	public AddressBook() {
+		buddyInfo= new ArrayList<BuddyInfo>();
+	}
 	
 	public void addBuddy(BuddyInfo aBuddyInfo) {
 		if(aBuddyInfo!=null) {
@@ -16,6 +19,10 @@ public class AddressBook {
 		}
 	}
 		public static void main(String[]args) {
-			System.out.println("Address Book");
+			BuddyInfo buddy= new BuddyInfo ("Tom","Carleton","613");
+			AddressBook addressBook = new AddressBook();
+			addressBook.addBuddy(buddy);
+			addressBook.removeBuddy(0);
+;			System.out.println("Address Book");
 		}
 	}
